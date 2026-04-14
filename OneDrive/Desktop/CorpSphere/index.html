@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CorpSphere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 id="orgName">CorpSphere</h2>
+    <p id="orgType"></p>
+
+    <!-- Org Selector -->
+    <select id="orgSelect" onchange="switchOrg()">
+      <option value="Amazon">Amazon</option>
+      <option value="Google">Google</option>
+      <option value="InnovateX Startup">InnovateX Startup</option>
+      <option value="NextGen Labs">NextGen Labs</option>
+      <option value="IIT Bombay">IIT Bombay</option>
+      <option value="NIT Surathkal">NIT Surathkal</option>
+    </select>
+
+    <input id="search" placeholder="Search members..." onkeyup="searchMembers()" />
+
+    <nav>
+      <p class="active">Dashboard</p>
+      <p>Members</p>
+      <p>Projects</p>
+    </nav>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Welcome -->
+    <section class="card hero">
+      <h1>Welcome to <span id="orgTitle">CorpSphere</span></h1>
+      <p>Enterprise multi-tenant ecosystem</p>
+    </section>
+
+    <!-- Members (Dynamic) -->
+    <section class="card" id="memberContainer">
+      <h2>Member Directory</h2>
+    </section>
+
+    <!-- Profile -->
+    <section class="card profile">
+      <img src="https://i.pravatar.cc/150?img=3">
+      <h2>Marcus Thorne</h2>
+      <p>Principal Strategist</p>
+      <button>Assign Project</button>
+      <button class="secondary">View Portfolio</button>
+    </section>
+
+    <!-- Stats -->
+    <section class="card stats">
+      <h2>Organization Growth</h2>
+      <h1>87.4%</h1>
+      <div class="progress"><div style="width:87%"></div></div>
+      <p>Active Projects: 142</p>
+    </section>
+
+  </main>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <span onclick="closeModal()">✖</span>
+    <h2 id="modalName"></h2>
+    <p id="modalRole"></p>
+    <div class="progress"><div id="modalProgress"></div></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

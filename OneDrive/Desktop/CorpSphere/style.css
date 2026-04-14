@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f0c29, #020617);
+  color: #e9d5ff;
+}
+
+/* Layout */
+.app {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  padding: 25px;
+  background: rgba(20, 10, 50, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.sidebar h2 {
+  color: #c084fc;
+}
+
+.sidebar select,
+.sidebar input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #4c1d95;
+  color: white;
+}
+
+.sidebar nav p {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar nav p:hover {
+  color: #c084fc;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+/* Card */
+.card {
+  background: rgba(20, 10, 50, 0.5);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(168,85,247,0.3);
+}
+
+/* Member */
+.member {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.member img {
+  border-radius: 50%;
+}
+
+/* Progress */
+.progress {
+  height: 8px;
+  background: #1e1b4b;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.progress div {
+  background: linear-gradient(90deg,#a855f7,#7c3aed);
+  height: 100%;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#a855f7,#6d28d9);
+  color: white;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid #a855f7;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-box {
+  background: #020617;
+  padding: 20px;
+  margin: 10% auto;
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
